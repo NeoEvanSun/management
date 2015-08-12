@@ -1,0 +1,14 @@
+<template name="pager">
+    <div class="pagination pagination-centered">
+        {{look this}}
+        <ul>
+            <li><a href="{{pathFor pageUrl pageNum=1}}">First</a></li>
+            <li><a href="#">Prev</a></li>
+            {{#each createPageButtons this}}
+                <li class="{{#if isActive toPageNum ../pageNum}}active{{/if}}"><a href="{{pathFor url pageNum=toPageNum}}">{{label}}</a></li>
+            {{/each}}
+            <li><a href="#">Next</a></li>
+            <li><a href="#">Last</a></li>
+        </ul>
+    </div>
+</template>

@@ -1,0 +1,26 @@
+<template name="studentItem">
+	<tr>
+		<td>{{name}}</td>
+		<td class="center">{{phoneNum}}</td>
+		<td class="center">{{classTime}}</td>
+        <td class="center">{{> className class_id}}</td>
+		<td class="center">
+			<span class="label label-warning">{{type}}</span>
+		</td>
+		<td class="center">
+			<a class="btn btn-success" href="{{pathFor 'studentClassDataEdit'}}">
+				<i class="halflings-icon white zoom-in"></i>  
+			</a>
+			<a class="btn btn-info" href="{{pathFor 'studentEdit'}}">
+				<i class="halflings-icon white edit"></i>  
+			</a>
+			<a class="btn btn-danger" href="javascript:void(0)">
+				<i class="halflings-icon white trash"></i> 
+			</a>
+
+            <a class="btn btn-warning" href="{{pathFor 'dataCalendar'}}">
+                <i class="halflings-icon white calendar"></i>
+            </a>
+		</td>
+	</tr>
+</template>

@@ -1,0 +1,23 @@
+<template name="dataItem">
+    <tr>
+        <td class="center">{{>studentName stu_id}}</td>
+        <td class="center">{{data_cost}}</td>
+        <td class="center">{{data_content}}</td>
+        <td class="center">{{>className class_id}}</td>
+        <td class="center">{{data_time}}</td>
+        <td class="center">
+            <a class="btn btn-success" href="#">
+                <i class="halflings-icon white zoom-in"></i>
+            </a>
+            <a class="btn btn-info" href="">
+                <i class="halflings-icon white edit"></i>
+            </a>
+            <a class="btn btn-danger" href="javascript:void(0)">
+                <i class="halflings-icon white trash"></i>
+            </a>
+            <a class="btn btn-warning" href="{{pathFor 'dataCalendar' _id=this.stu_id}}">
+                <i class="halflings-icon white calendar"></i>
+            </a>
+        </td>
+    </tr>
+</template>

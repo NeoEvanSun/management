@@ -1,0 +1,40 @@
+<template name="studentClassDataEdit">
+    <div class="row-fluid sortable ui-sortable">
+        <div class="box span12">
+            <div class="box-header" data-original-title="">
+                <h2><i class="halflings-icon white edit"></i><span class="break"></span>{{name}}</h2>
+            </div>
+            <div class="box-content">
+                <form class="form-horizontal" id="add_student_form">
+                    <fieldset>
+
+                        <div class="control-group">
+                            <label class="control-label" for="class_data">课时</label>
+                            <div class="controls">
+                                <input class="input-xlarge focused" id="class_data" type="text" placeholder="在此输入变更的课时" maxlength="3">
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <label class="control-label" for="edit_type">修改类型</label>
+                            <div class="controls">
+                                <select id="edit_type">
+                                    {{#each editTypes}}
+                                        <option value={{type_value}}>{{type_name}}</option>
+                                    {{/each}}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button class="btn">Cancel</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</template>

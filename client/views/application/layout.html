@@ -1,0 +1,18 @@
+<template name="layout">
+	<div class="navbar">
+		{{> navbar}}
+	</div>
+	<!-- start: Header -->
+		<div class="container-fluid-full">
+			<div class="row-fluid">	
+			<!-- start: Main Menu -->
+			{{> sildebar}}
+			<!-- end: Main Menu -->
+			<!-- start: Content -->
+				<div id="content" class="span10">
+					{{> yield}}
+				</div><!--/.fluid-container-->
+			<!-- end: Content -->
+			</div><!--/#content.span10-->
+		</div><!--/fluid-row-->
+</template>

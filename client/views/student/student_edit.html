@@ -1,0 +1,88 @@
+<template name="studentEdit">
+		<div class="row-fluid sortable ui-sortable">
+				<div class="box span12">
+					<div class="box-header" data-original-title="">
+						<h2><i class="halflings-icon white edit"></i><span class="break"></span>{{title}}</h2>
+					</div>
+					<div class="box-content">
+						<form class="form-horizontal" id="add_student_form">
+							<fieldset>
+
+							  <div class="control-group">
+								<label class="control-label" for="student_name">学员姓名</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" id="student_name" type="text" placeholder="在此输入学员姓名" value="{{name}}">
+								</div>
+							  </div>
+
+							  <div class="control-group">
+								<label class="control-label" for="parent_name">家长姓名</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" id="parent_name" type="text" placeholder="在此输入家长姓名" value="{{parentName}}">
+								</div>
+							  </div>
+
+							  <div class="control-group">
+								<label class="control-label" for="phone_number">联系电话</label>
+								<div class="controls">
+								  <input class="input-xlarge focused" id="phone_number" type="number" placeholder="输入11位手机号码" value="{{phoneNum}}">
+								</div>
+							  </div>
+							  
+
+							  <div class="control-group">
+							  	<label class="control-label" for="sex">性别</label>
+							  		<div class="controls">
+							  			<select id="sex">
+							  			{{#each sexes}}
+							  				<option value="{{value}}" {{selectchoice ../sex}}>{{name}}</option>
+							  			{{/each}}
+							  			</select>
+							  		</div>
+							  </div>
+
+							  <div class="control-group">
+							  	<label class="control-label" for="student_type">学员类型</label>
+							  		<div class="controls">
+							  			<select id="student_type">
+							  			{{#each studentTypes}}
+							  				<option value="{{value}}" {{selectchoice ../type}}>{{name}}</option>
+							  			{{/each}}
+							  			</select>
+							  		</div>
+							  </div>
+							  
+							  <div class="control-group">
+							  	<label class="control-label" for="select_class">选择班级</label>
+							  		<div class="controls">
+							  			<select id="select_class">
+							  			{{#each classes}}
+							  				<option value="{{value}}" {{selectchoice ../class}}>{{classname}}</option>
+							  			{{/each}}
+							  			</select>
+							  		</div>
+							  </div>
+
+							  <div class="control-group">
+								<label class="control-label" for="channel">来源渠道</label>
+								<div class="controls">
+								  <select id="channel">
+									{{#each channels}}
+										<option value="{{value}}" {{selectchoice ../channel}}>{{name}}</option>
+									{{/each}}
+								  </select>
+								</div>
+							  </div>
+							
+							  <div class="form-actions">
+								<button type="submit" class="btn btn-primary">Save</button>
+								<button class="btn">Cancel</button>
+							  </div>
+							</fieldset>
+						  </form>
+					
+					</div>
+				</div><!--/span-->
+			
+			</div>
+</template>
