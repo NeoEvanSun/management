@@ -4,14 +4,20 @@ Template.pager.helpers({
     },
     createPageButtons:function(pageInfo){
         var pageButtons = [];
-        for(var i=0;i < pageInfo.buttonNum ;i++){
+        var maxPageNum = parseInt(pageInfo.dataCounts / pageInfo.limit);
+        maxPageNum = pageInfo.dataCounts % pageInfo.limit > 0 ? maxPageNum + 1: maxPageNum;
+        var middleCount = parseInt(pageInfo.buttonNum / 2);
+        var forSize = pageInfo.pageNum <= middleCount ? (pageInfo.buttonNum +middleCount)  : pageInfo.buttonNum;
+        for(var i=0;i < forSize ;i++){
             var pageButton = {};
-            var toPage = -2+i+pageInfo.pageNum;
+            var toPage = -middleCount+i+pageInfo.pageNum;
             pageButton.url = pageInfo.pageUrl;
             pageButton.label = toPage;
             pageButton.toPageNum = toPage;
-            if(pageButton.toPageNum>0){
+            if(pageButton.toPageNum > 0 && pageButton.toPageNum <= maxPageNum && pageButtons.length < pageInfo.buttonNum){
                 pageButtons.push(pageButton);
+            }else{
+
             }
         }
         return pageButtons;
