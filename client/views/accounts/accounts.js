@@ -1,3 +1,3 @@
-Accounts.onLogin(function(){
-    console.log("log");
+Accounts.ui.config({
+   passwordSignupFields: 'USERNAME_ONLY'
 });

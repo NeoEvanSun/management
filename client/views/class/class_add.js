@@ -1,5 +1,6 @@
 Template.classAdd.helpers({
-    mydatepicker:{mydateid:'class_time'}
+    mydatepicker:{mydateid:'class_time'},
+    teachers:Meteor.users.find()
 });
 
 Template.classAdd.events({

@@ -12,8 +12,7 @@
             <div class="box-header" data-original-title>
                 <h2><i class="halflings-icon white user"></i><span class="break"></span>Members</h2>
                 <div class="box-icon">
-                    <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
-                    <a href="{{pathFor 'classAdd'}}" class="btn-minimize"><i class="halflings-icon white plus"></i></a>
+                    {{#if ownPression}}<a href="{{pathFor 'classAdd'}}" class="btn-minimize"><i class="halflings-icon white plus"></i></a>{{/if}}
                 </div>
             </div>
             <div class="box-content">

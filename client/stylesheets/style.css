@@ -248,6 +248,10 @@ a {
 	color: #646464;
 }
 
+.loginPage{
+	background: url(img/bg-login.jpg);
+}
+
 hr {
 	height: 2px;
 	border: none;

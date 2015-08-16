@@ -1,3 +1,5 @@
-Accounts.onCreateUser(function(option,user){
-    throw new Meteor.error("403","用户名长度不可以过3");
+Accounts.onCreateUser(function(options,user){
+    //user.pression=9999;
+    user.permission=0001;
+    return user;
 })
