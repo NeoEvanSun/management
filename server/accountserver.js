@@ -1,5 +1,4 @@
 Accounts.onCreateUser(function(options,user){
-    //user.pression=9999;
-    user.permission=0001;
+    user.username == "admin" ?user.permission = 9999 : user.permission=1;
     return user;
 })
